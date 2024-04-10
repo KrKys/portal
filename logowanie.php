@@ -15,6 +15,8 @@ if(isset($_POST['submit'])) {
     $result = $db->query($sql);
 
     if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $_SESSION['id_user'] = $row['ID'];
         $_SESSION['login_user'] = $email;
         header("location: profile.php"); 
     } else {

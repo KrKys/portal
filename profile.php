@@ -1,14 +1,14 @@
 <?php
 
-if(isset($_GET['profileID'])) {
+if(isset($_SESSION['ID'])) {
  
-    $id = $_GET['profileID'];
+    $id = $_SESSION['ID'];
 } else {
 
     $id = 1;
 }
 
-
+var_dump($_SESSION);
 
 $sql = "SELECT * FROM profile 
         LEFT JOIN photo ON profile.profilePhotoID = photo.ID
