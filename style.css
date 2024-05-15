@@ -1,32 +1,36 @@
 #loginForm {
-    width: 300px;
+    width: 400px; 
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align: center; 
 }
 
 #loginForm h2 {
-    text-align: center;
     margin-bottom: 20px;
+    font-size: 24px; 
 }
 
 #loginForm label {
     font-weight: bold;
+    display: block; 
+    margin-bottom: 5px; 
 }
 
 #loginForm input[type="email"],
 #loginForm input[type="password"] {
-    width: 95%;
-    margin-bottom: 5px;
-    padding: 8px;
+    width: 90%; 
+    margin: 5px auto; 
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
 
 #loginForm input[type="submit"] {
-    width: 100%;
+    width: 90%; 
+    margin: 10px auto; 
     background-color: #4caf50;
     color: white;
     cursor: pointer;

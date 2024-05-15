@@ -8,7 +8,7 @@ if(isset($_SESSION['ID'])) {
     $id = 1;
 }
 
-var_dump($_SESSION);
+
 
 $sql = "SELECT * FROM profile 
         LEFT JOIN photo ON profile.profilePhotoID = photo.ID
@@ -44,7 +44,7 @@ $profilePhotoUrl = $result['url']
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil użytkownika</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
 </head>
 <body>
     <div id="profileContent">

@@ -12,6 +12,8 @@ if(isset($_POST['submit'])) {
     $imie = $_POST['imie'];
     $nazwisko = $_POST['nazwisko'];
 
+    $hashed_password = password_hash($haslo, PASSWORD_ARGON2I);
+
     $sql_user = "INSERT INTO user (email, password) VALUES ('$email', '$haslo')";
 
     if ($db->query($sql_user) === TRUE) {
