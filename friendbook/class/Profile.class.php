@@ -1,15 +1,13 @@
 <?php
 class Profile {
     private int $_id;
-    private int $_userID;
     private string $_firstName;
     private string $_lastName;
     private int $_profilePhotoID;
 
-    public function __construct(int $id, int $userID, string $firstName, string $lastName, int $profilePhotoID)
+    public function __construct(int $id, string $firstName, string $lastName, int $profilePhotoID)
     {
         $this->_id = $id;
-        $this->_userID = $userID;
         $this->_firstName = $firstName;
         $this->_lastName = $lastName;
         $this->_profilePhotoID = $profilePhotoID;
@@ -27,7 +25,7 @@ class Profile {
         $q->execute();
         $result = $q->get_result();
         $row = $result->fetch_assoc();
-        $p = new Profile($row['ID'], $row['userID'], $row['firstName'], $row['lastName'], $row['profilePhotoID']);
+        $p = new Profile($row['ID'], $row['firstName'], $row['lastName'], $row['profilePhotoID']);
         return $p;
     }
     static function GetAll() : array {
@@ -41,7 +39,7 @@ class Profile {
         $result = $q->get_result();
         $profiles = array();
         while($row = $result->fetch_assoc()){
-            $profiles[] = new Profile($row['ID'], $row['userID'], $row['firstName'], $row['lastName'], $row['profilePhotoID']);
+            $profiles[] = new Profile($row['ID'], $row['firstName'], $row['lastName'], $row['profilePhotoID']);
         }
         return $profiles;
     }
@@ -56,7 +54,7 @@ class Profile {
         $q->execute();
         $result = $q->get_result();
         $row = $result->fetch_assoc();
-        $p = new Profile($row['ID'], $row['userID'], $row['firstName'], $row['lastName'], $row['profilePhotoID']);
+        $p = new Profile($row['ID'], $row['firstName'], $row['lastName'], $row['profilePhotoID']);
         return $p;
     }
     function getFullName() : string {

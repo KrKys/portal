@@ -1,9 +1,105 @@
-div#profileContent {
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #4b0082; 
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+form {
+    width: 100%;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #4b0082; 
+}
+
+.form-control {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #4b0082; 
+}
+
+
+.btn-primary {
+    background-color: #4b0082; 
+    border-color: #4b0082; 
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #3a006a; 
+    border-color: #3a006a; 
+}
+
+
+.profile-photo {
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    font-size: 18px;
+    color: #4b0082; 
+    margin-bottom: 10px;
     text-align: center;
 }
-span#name {
-    font-family: 'Comic Sans MS';
-    font-size: 3rem;
-    line-height: 6rem;
-    display: block;
+
+
+a button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
 }
